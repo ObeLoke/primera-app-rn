@@ -1,6 +1,7 @@
 import React from 'react'
-import { Text, TouchableOpacity, View, StyleSheet, Button } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import { useState } from 'react';
+import { Fab } from '../components/Fab';
 
 export const ContadorScreen = () => {
 
@@ -12,8 +13,8 @@ export const ContadorScreen = () => {
                 Contador: {contador}
             </Text>
 
-            <TouchableOpacity
-                style={styles.fabLocationBL}
+            <Fab
+                title="-1"
                 onPress={() => {
                     if (contador < 1) {
                         setContador(0)
@@ -21,37 +22,14 @@ export const ContadorScreen = () => {
                         setContador(contador - 1)
                     }
                 }}
-            >
-                <View style={styles.fab}>
-                    <Text style={styles.fabText}>
-                        -1
-                    </Text>
-                </View>
-            </TouchableOpacity>
+                position="bl"
+            />
 
-
-            <TouchableOpacity
-                style={styles.fabLocationBC}
-                onPress={() => setContador(0)}
-            >
-                <View style={styles.fabCentro}>
-                    <Text style={styles.fabText}>
-                        Inicializar
-                    </Text>
-                </View>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-                style={styles.fabLocationBR}
+            <Fab
+                title="+1"
                 onPress={() => setContador(contador + 1)}
-            >
-                <View style={styles.fab}>
-                    <Text style={styles.fabText}>
-                        +1
-                    </Text>
-                </View>
-            </TouchableOpacity>
-
+                position="br"
+            />
         </View>
     )
 }
@@ -65,40 +43,5 @@ const styles = StyleSheet.create({
         fontSize: 45,
         textAlign: 'center',
         top: -10
-    },
-    fabLocationBR: {
-        position: 'absolute',
-        bottom: 25,
-        right: 25
-    },
-    fabLocationBC: {
-        position: 'absolute',
-        bottom: 25,
-        alignSelf: 'center'
-    },
-    fabLocationBL: {
-        position: 'absolute',
-        bottom: 25,
-        left: 25,
-    },
-    fab: {
-        backgroundColor: '#5856D6',
-        width: 60,
-        height: 60,
-        borderRadius: 100,
-        justifyContent: 'center'
-    },
-    fabCentro: {
-        backgroundColor: '#5856D6',
-        width: 150,
-        height: 60,
-        borderRadius: 30,
-        justifyContent: 'center'
-    },
-    fabText: {
-        color: 'white',
-        fontSize: 25,
-        fontWeight: 'bold',
-        alignSelf: 'center'
     }
 });

@@ -9,7 +9,7 @@ const App = () => {
     // <HolaMundoScreen />
     // <ContadorScreen />
 
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <BoxObjectModelScreen />
     </SafeAreaView>
   )

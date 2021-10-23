@@ -25,27 +25,30 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#28425B',
-        justifyContent: 'space-between',
-        flexDirection: 'row'
+        // justifyContent: 'space-between',
+        // flexDirection: 'row'
 
     },
     cajaMorada: {
-        width: 100,
-        // height: 100,
+        flex: 2,
+        // width: 100,
+        height: 100,
         borderWidth: 10,
         borderColor: 'white',
         backgroundColor: '#5856D6',
     },
     cajaNaranja: {
-        width: 100,
-        // height: 100,
+        // width: 100,
+        flex: 2,
+        height: 100,
         borderWidth: 10,
         borderColor: 'white',
         backgroundColor: '#F0A23B',
     },
     cajaCeleste: {
-        width: 100,
-        // height: 100,
+        // width: 100,
+        flex: 4,
+        height: 100,
         borderWidth: 10,
         borderColor: 'white',
         backgroundColor: '#28C4D9',

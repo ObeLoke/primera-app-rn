@@ -35,10 +35,11 @@ const styles = StyleSheet.create({
     },
     cajaNaranja: {
         width: 100,
-        height: 100,
+        // height: 100,
         borderWidth: 10,
         borderColor: 'white',
         backgroundColor: '#F0A23B',
+        flex: 1
     },
     cajaCeleste: {
         width: 100,
